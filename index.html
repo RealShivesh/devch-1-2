@@ -39,7 +39,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
         margin: 0.6em;
     }
 
@@ -52,9 +52,7 @@
         margin: 0 0 ;
     } */
 
-    .card:nth-child(2n){
-        margin: 3em 0 0 0;
-    }
+    
 
     .image{
         display: flex;
@@ -78,7 +76,6 @@
     }
 
     footer{
-        
         width: 100%;
         display: flex;
         justify-content: center;
@@ -90,12 +87,49 @@
         margin: 0.5em;
     }
 
+    @media (max-width: 576px){
+        .card:nth-child(2n){
+            margin: 3em 0 0 0;
+        }
+    }
+
+    @media (min-width: 576px){
+        header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 4em;
+        }
+        header div{
+            width: 50%;
+        }
+        .desc{width: 80%;}
+        .grid{
+            margin: 4em;
+        }
+        .card{
+            width: 30%;
+        }
+        .card:nth-child(3n+2){
+            margin: 3em 0 0 0;
+        }
+    }
+
+    @media (min-width: 992px){
+        header{margin: 2em 10em;}
+        .grid{margin: 6em 10em;}
+    }
+
 </style>
 <body>
     <header>
-        <h1>The creative crew</h1>
-        <div class="subtitle">Who are we</div>
-        <div class="desc">We are a team of creatively diverse, driven, innovative individuals working in various locations around the world.</div>
+        <div>
+            <h1>The creative crew</h1>
+        </div>
+        <div>
+            <div class="subtitle">Who are we</div>
+            <div class="desc">We are a team of creatively diverse, driven, innovative individuals working in various locations around the world.</div>
+        </div>
     </header>
     <section class="grid">
         <div class="card">
